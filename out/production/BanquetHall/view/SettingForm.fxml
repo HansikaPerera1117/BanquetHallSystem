@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="467.0" style="-fx-background-color: #fff6c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingFormController">
+   <children>
+      <Label layoutX="23.0" layoutY="40.0" text="Reset Password">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="93.0" prefHeight="2.0" prefWidth="440.0" style="-fx-background-color: #000000;" />
+      <JFXPasswordField fx:id="pwdOldPassword" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="242.0" onAction="#pwdSearchOnAction" prefHeight="65.0" prefWidth="385.0" promptText="Old Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="txtUserName" focusColor="BLACK" labelFloat="true" layoutX="44.0" layoutY="134.0" onAction="#txtSearchOnAction" prefHeight="65.0" prefWidth="385.0" promptText="User name">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pwdNewPassword" focusColor="BLACK" labelFloat="true" layoutX="46.0" layoutY="346.0" prefHeight="65.0" prefWidth="385.0" promptText="New Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton buttonType="RAISED" layoutX="164.0" layoutY="464.0" onAction="#btnResetOnAction" prefHeight="65.0" prefWidth="138.0" ripplerFill="BLACK" style="-fx-background-color: #e0b73d;" text="Reset">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="131.0" layoutY="464.0" prefHeight="65.0" prefWidth="44.0" style="-fx-background-color: #e0b73d; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/lock_reset.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

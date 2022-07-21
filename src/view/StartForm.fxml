@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="startContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" layoutX="4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/start-bc.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="805.0" layoutY="116.0" text="Welcome To" textFill="#e8b642">
+         <font>
+            <Font name="Dubai Light" size="80.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="455.0" text="BANQUET" textFill="#deb33e">
+         <font>
+            <Font name="Felix Titling" size="130.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="251.0" text="VELS DEMORA " textFill="#deb33e">
+         <font>
+            <Font name="Felix Titling" size="160.0" />
+         </font>
+      </Label>
+      <JFXButton blendMode="LIGHTEN" buttonType="RAISED" layoutX="886.0" layoutY="748.0" onAction="#openLoginOnAction" prefHeight="65.0" prefWidth="300.0" ripplerFill="BLACK" style="-fx-background-color: #e0b73d; -fx-background-radius: 50;" text="Get Start">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="860.0" layoutY="748.0" prefHeight="65.0" prefWidth="98.0" style="-fx-background-color: #e0b73d; -fx-background-radius: 50;">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="44.0" layoutX="48.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/start.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="146.0" layoutY="629.0" text="LEGENDS OF WEDDINGS" textFill="#deb33e">
+         <font>
+            <Font name="Bell MT" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

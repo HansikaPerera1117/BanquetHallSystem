@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="menuSelectionContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuSelectionFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="125.0" opacity="0.14" prefHeight="181.0" prefWidth="1257.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <TableView fx:id="tblMenuSelection" layoutX="56.0" layoutY="377.0" prefHeight="502.0" prefWidth="1589.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colNum" prefWidth="95.00003051757812" text="Num" />
+            <TableColumn fx:id="colMenuID" prefWidth="131.0" text="Menu ID" />
+            <TableColumn fx:id="colMenuChoiceNum" minWidth="8.0" prefWidth="159.0" text="Menu Choice Num" />
+            <TableColumn fx:id="colOptions" minWidth="8.0" prefWidth="1202.0" text="Options" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdateMenuOptions" buttonType="RAISED" layoutX="1321.0" layoutY="215.0" onAction="#btnUpdateOptionsOnAction" prefHeight="65.0" prefWidth="367.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Update Menu Options">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="66.0" layoutY="318.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="137.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1600.0" layoutY="894.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1572.0" layoutY="894.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblMenuChoiceName" layoutX="573.0" layoutY="144.0" prefHeight="65.0" prefWidth="500.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" text="Menu Choice Name">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOptions" layoutX="71.0" layoutY="223.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="1216.0" promptText="Options" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="16.0" layoutY="77.0" prefHeight="46.0" prefWidth="373.0" text="Menu Selection  Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNum" layoutX="73.0" layoutY="143.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="123.0" promptText="Num" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblMenuID" layoutX="215.0" layoutY="143.0" prefHeight="65.0" prefWidth="160.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" text="Menu ID">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenuChoiceNum" layoutX="388.0" layoutY="145.0" prefHeight="65.0" prefWidth="170.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" text="Menu Choice Num">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

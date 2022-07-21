@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookingContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" layoutX="7.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblBooking" layoutX="32.0" layoutY="552.0" prefHeight="376.0" prefWidth="1138.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colBookingID" prefWidth="111.0" text="Booking ID" />
+            <TableColumn fx:id="colDate" minWidth="8.0" prefWidth="110.00003051757812" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="108.0" text="Time" />
+            <TableColumn fx:id="colGuestCount" prefWidth="90.0" text="GuestCount" />
+            <TableColumn fx:id="colCustomerID" minWidth="0.0" prefWidth="99.0" text="Customer ID" />
+            <TableColumn fx:id="colBallroomID" minWidth="0.0" prefWidth="92.0" text="Ballroom ID" />
+            <TableColumn fx:id="colMenuID" minWidth="0.0" prefWidth="89.0" text="Menu ID" />
+            <TableColumn fx:id="colMusicID" minWidth="0.0" prefWidth="87.0" text="Music ID" />
+            <TableColumn fx:id="colLiquorID" minWidth="0.0" prefWidth="86.0" text="Liquor ID" />
+            <TableColumn fx:id="colLiquorCount" minWidth="0.0" prefWidth="99.0" text="Liquor Count" />
+            <TableColumn fx:id="colDescription" minWidth="0.0" prefWidth="165.0" text="Description" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="22.0" layoutY="159.0" opacity="0.16" prefHeight="353.0" prefWidth="530.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <Label layoutX="32.0" layoutY="133.0" prefHeight="44.0" prefWidth="237.0" text="Customer Details" textFill="#ffc934">
+         <font>
+            <Font name="Sitka Subheading" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="132.0" prefHeight="44.0" prefWidth="237.0" text="Booking Details" textFill="#ffc934">
+         <font>
+            <Font name="Sitka Subheading" size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="579.0" layoutY="159.0" opacity="0.16" prefHeight="279.0" prefWidth="803.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <JFXTimePicker fx:id="tmPicker" defaultColor="BLACK" layoutX="962.0" layoutY="186.0" prefHeight="65.0" promptText="Time" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXDatePicker fx:id="dtPicker" defaultColor="BLACK" layoutX="764.0" layoutY="186.0" prefHeight="65.0" prefWidth="186.0" promptText="Date" style="-fx-background-radius: 20; -fx-border-color: #000000; -fx-background-color: #fff7d2;" />
+      <Label fx:id="lblCusId" layoutX="593.0" layoutY="262.0" prefHeight="65.0" prefWidth="137.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" text="Customer ID">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="737.0" layoutY="263.0" prefHeight="65.0" prefWidth="150.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXComboBox fx:id="cmbBallroomID" focusColor="#fff7d2" layoutX="738.0" layoutY="262.0" prefHeight="65.0" prefWidth="150.0" promptText="Ballroom ID" unFocusColor="BLACK" />
+      <AnchorPane layoutX="893.0" layoutY="264.0" prefHeight="65.0" prefWidth="150.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXComboBox fx:id="cmbMenuID" focusColor="#fff7d2" layoutX="894.0" layoutY="263.0" prefHeight="65.0" prefWidth="150.0" promptText="Menu ID" unFocusColor="BLACK" />
+      <AnchorPane layoutX="1051.0" layoutY="263.0" prefHeight="65.0" prefWidth="150.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXComboBox fx:id="cmbMusicID" focusColor="#fff7d2" layoutX="1052.0" layoutY="262.0" prefHeight="65.0" prefWidth="150.0" promptText="Music ID" unFocusColor="BLACK" />
+      <AnchorPane layoutX="1209.0" layoutY="263.0" prefHeight="65.0" prefWidth="150.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXComboBox fx:id="cmbLiquorID" focusColor="#fff7d2" layoutX="1210.0" layoutY="262.0" prefHeight="65.0" prefWidth="150.0" promptText="Liquor ID" unFocusColor="BLACK" />
+      <Label layoutX="921.0" layoutY="332.0" prefHeight="44.0" prefWidth="392.0" text="Required Liquor Bottle Count :" textFill="#ffc934">
+         <font>
+            <Font name="Sitka Subheading" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="919.0" layoutY="377.0" prefHeight="28.0" prefWidth="458.0" text="At the event, you will receive required liquor " textFill="#ffcc00">
+         <font>
+            <Font name="Sitka Subheading" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="919.0" layoutY="399.0" prefHeight="28.0" prefWidth="412.0" text="bottle count , depending on the ballroom." textFill="#ffcc00">
+         <font>
+            <Font name="Sitka Subheading" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="589.0" layoutY="455.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="137.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPlaceBooking" buttonType="RAISED" layoutX="1417.0" layoutY="345.0" onAction="#btnPlaceBookingOnAction" prefHeight="65.0" prefWidth="275.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Place Booking">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1557.0" layoutY="96.0" onAction="#btnNewBookingOnAction" prefHeight="58.0" prefWidth="124.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="+ New">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1388.0" layoutY="345.0" prefHeight="65.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/Place_Order.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPrintBill" buttonType="RAISED" layoutX="1504.0" layoutY="812.0" onAction="#printBillOnAction" prefHeight="65.0" prefWidth="175.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Print Bill">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1472.0" layoutY="812.0" prefHeight="65.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/print.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1184.0" layoutY="449.0" opacity="0.2" prefHeight="347.0" prefWidth="495.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="1590.0" layoutY="894.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1562.0" layoutY="894.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="1202.0" layoutY="476.0" prefHeight="44.0" prefWidth="218.0" text="Total Price      :" textFill="#ffc934">
+         <font>
+            <Font name="Calibri" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="1202.0" layoutY="562.0" prefHeight="44.0" prefWidth="218.0" text="Advance          :" textFill="#ffc934">
+         <font>
+            <Font name="Calibri" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="1202.0" layoutY="687.0" prefHeight="44.0" prefWidth="218.0" text="Balance            :" textFill="#ffc934">
+         <font>
+            <Font name="Calibri" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="1436.0" layoutY="472.0" prefHeight="58.0" prefWidth="225.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="1436.0" layoutY="680.0" prefHeight="58.0" prefWidth="225.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1202.0" layoutY="648.0" prefHeight="3.0" prefWidth="458.0" />
+      <Separator layoutX="1202.0" layoutY="769.0" prefWidth="458.0" />
+      <Separator layoutX="1202.0" layoutY="773.0" prefWidth="458.0" />
+      <TextField fx:id="txtCID" layoutX="40.0" layoutY="187.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="137.0" promptText="C-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCNIC" layoutX="40.0" layoutY="265.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="237.0" promptText="NIC" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCName" layoutX="187.0" layoutY="187.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="351.0" promptText="Name" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCTelNo" layoutX="287.0" layoutY="265.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="255.0" promptText="TelNo" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCEmail" layoutX="40.0" layoutY="345.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="495.0" promptText="Email" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCAddress" layoutX="40.0" layoutY="425.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="495.0" promptText="Address" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtBookingID" layoutX="593.0" layoutY="188.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="160.0" promptText="Booking-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescription" layoutX="589.0" layoutY="338.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="314.0" promptText="Description" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLiquorCount" alignment="CENTER_RIGHT" layoutX="1302.0" layoutY="334.0" onKeyReleased="#textFields_Key_Released" prefHeight="44.0" prefWidth="65.0" promptText="0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAdvance" alignment="CENTER_RIGHT" layoutX="1436.0" layoutY="555.0" onAction="#txtSetBalanceOnAction" onKeyReleased="#textFields_Key_ReleasedAdvance" prefHeight="58.0" prefWidth="225.0" promptText="00000.00" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="25.0" />
+         </font>
+      </TextField>
+      <Label layoutX="19.0" layoutY="78.0" prefHeight="46.0" prefWidth="285.0" text="Booking Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtGuestCount" layoutX="1180.0" layoutY="186.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="160.0" promptText="Guest Count" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

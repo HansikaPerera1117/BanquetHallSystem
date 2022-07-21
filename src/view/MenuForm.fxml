@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="menuContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblMenu" layoutX="315.0" layoutY="242.0" prefHeight="257.0" prefWidth="819.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="147.99996948242188" text="ID" />
+            <TableColumn fx:id="colName" minWidth="8.0" prefWidth="430.0" text="Name" />
+            <TableColumn fx:id="colChargeNetPerPerson" minWidth="0.0" prefWidth="240.0" text="Charge Net Per Person" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdateCharges" buttonType="RAISED" layoutX="1152.0" layoutY="148.0" onAction="#btnUpdateChargeOnAction" prefHeight="65.0" prefWidth="318.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Update Chargers">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="236.0" layoutY="637.0" text="Menu Choice" textFill="#ffc934">
+         <font>
+            <Font name="Leelawadee UI" size="40.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="180.0" layoutY="531.0" opacity="0.14" prefHeight="408.0" prefWidth="1274.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <TableView fx:id="tblMenuChoice" layoutX="529.0" layoutY="558.0" prefHeight="358.0" prefWidth="853.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colNum" prefWidth="118.0" text="Num" />
+            <TableColumn fx:id="colChoiceName" minWidth="8.0" prefWidth="352.0" text="Name" />
+            <TableColumn fx:id="colChoice" minWidth="0.0" prefWidth="383.0" text="Choice" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblName" layoutX="274.0" layoutY="149.0" prefHeight="65.0" prefWidth="450.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" text="Name">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1596.0" layoutY="890.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1568.0" layoutY="890.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtCharge" layoutX="748.0" layoutY="148.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="349.0" promptText="Charge Net Per Person" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="23.0" layoutY="79.0" prefHeight="46.0" prefWidth="246.0" text="Menu Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" layoutX="97.0" layoutY="148.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="156.0" promptText="M-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

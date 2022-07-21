@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookingBill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2176c495-78e0-4448-a5d4-2f50c0931239">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="CustomerID" class="java.lang.String"/>
+	<parameter name="Customer Name" class="java.lang.String"/>
+	<parameter name="Booking ID" class="java.lang.String"/>
+	<parameter name="Booking Date" class="java.lang.String"/>
+	<parameter name="Booking Time" class="java.lang.String"/>
+	<parameter name="Guest Count" class="java.lang.Integer"/>
+	<parameter name="Description" class="java.lang.String"/>
+	<parameter name="BallroomID" class="java.lang.String"/>
+	<parameter name="Menu ID" class="java.lang.String"/>
+	<parameter name="Music ID" class="java.lang.String"/>
+	<parameter name="Liquor ID" class="java.lang.String"/>
+	<parameter name="Liquor Count" class="java.lang.Integer"/>
+	<parameter name="Total" class="java.lang.Double"/>
+	<parameter name="Advance" class="java.lang.Double"/>
+	<parameter name="Balance" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="42" forecolor="#050505" uuid="8a1ec19f-1436-40e5-bb41-12bccf07e3a0"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VELS DEMORA BANQUET
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="220" height="18" forecolor="#363636" uuid="dd1291d4-9b48-45c2-8225-ee38001295e4"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[223A 1/2, Galle Road, Panadura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="89" width="270" height="20" forecolor="#363636" uuid="3a1553e2-fb3a-472e-8303-ad7c1e0147d5"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tel : 077-4159865 / 077-1254789 / 071-1156702]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="450" y="70" width="102" height="23" forecolor="#363636" uuid="3628acef-0f44-4382-918f-fa81e915d20b"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="468" y="88" width="80" height="24" forecolor="#363636" uuid="81d68d2d-5fe1-42ef-b145-14b7cd3596b0"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="113" width="555" height="1" forecolor="#2E2E2E" uuid="9d2132fe-6620-4d00-9ea2-a62cae27cd6c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="43" width="555" height="22" forecolor="#242424" uuid="85e72a59-ecf9-4416-ae09-d35e9cea1167"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LEGENDS OF WEDDINGS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="70" width="50" height="30" forecolor="#363636" uuid="55239bf0-f4a6-49cc-bed3-6b346e579cda"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="88" width="50" height="19" forecolor="#363636" uuid="f765c2e2-3148-4e49-845f-8ab3c709c15b"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="477" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="100" height="24" uuid="5b100304-c229-4864-af28-7f984e3af600"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Customer ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="10" width="115" height="24" uuid="935afcc0-f373-4551-ad76-8b49ea0ec241">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Customer Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="87" width="100" height="24" uuid="966cdc5b-14e0-4e70-bb7c-f64d7cc9d1f4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Booking ID     :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="47" width="555" height="1" forecolor="#919191" uuid="c0281486-5ea7-4e50-bdf4-ee6e139a4feb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="19" y="117" width="100" height="24" uuid="92ac7f10-ce40-47bd-8ed9-3f5aa7c1f021"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Booking Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="147" width="100" height="24" uuid="b0781eab-247a-41c0-abea-6757e9d6f532"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Booking time  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="52" width="100" height="21" forecolor="#7A7A7A" uuid="20b0b6df-6139-4243-9f9c-e99bad7c0e7c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Booking Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="180" width="100" height="24" uuid="909c6898-608d-4d8a-9ee3-68703f306675"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Guest Count   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="78" width="89" height="24" uuid="f276107d-1af8-4e7b-999d-ff4979de4426"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Ballroom ID  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="109" width="100" height="24" uuid="fca9db56-b62d-4223-bc57-e9f4b4819310"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Menu ID       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="142" width="100" height="24" uuid="2733affa-26af-4c22-927e-7aa9be5c1969"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Music ID      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="210" width="100" height="24" uuid="1dd12c90-fe7f-4330-81e3-f8f29e9af6c0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Description    :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="333" y="63" width="1" height="180" uuid="78e1ccce-d8c0-424f-928a-2f298566dc35">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="261" width="555" height="1" forecolor="#919191" uuid="b873cfb4-8294-4290-88f6-34b82b31eacd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="272" y="269" width="100" height="24" uuid="e3d4f196-be95-49d6-9781-747b7a83ec12"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total        :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="308" width="100" height="24" uuid="8cf852ff-9576-456b-82ac-956f3e62c0e4"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Advance  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="346" width="100" height="24" uuid="f1b58235-635b-4d71-914c-48016c22b3ac"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance   :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="260" y="377" width="295" height="1" forecolor="#8A8A8A" uuid="20e618ba-0383-45ba-9f4c-0a5d6b44b7eb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="260" y="299" width="295" height="1" forecolor="#8A8A8A" uuid="287ab748-641d-4774-b642-81ec1b16a900">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="260" y="339" width="295" height="1" forecolor="#8A8A8A" uuid="d207a380-f54c-424c-a6ff-b736347c43b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="260" y="262" width="1" height="115" uuid="947828b1-0745-46f1-ad21-1e5ae2f1eb67">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="555" y="262" width="1" height="115" uuid="89487e21-0ef9-4033-87a1-41635f329a91">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="366" y="261" width="1" height="115" uuid="75de0e35-1bde-48c5-ace1-0239fbf0b32b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="20" y="369" width="204" height="17" uuid="83d921af-2ccb-428b-89d0-d0c42c4c53a6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[> Advance paid will not be Refunded.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="391" width="204" height="17" uuid="86f6cfa5-477e-40f8-877f-b087e3ad3f04"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[> Full Payment paid befor 14 day's.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="10" width="80" height="30" uuid="d70fae3b-973f-4ecb-a26c-efc5467c2970"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CustomerID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="10" width="194" height="30" uuid="81dc70de-0951-47c4-a225-18af409d14ff"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Customer Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="87" width="209" height="30" uuid="d468b9aa-a549-4212-8ee9-134a1c1e525f"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Booking ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="117" width="209" height="30" uuid="964b45f8-dda1-46ce-8166-2481c92a3120"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Booking Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="147" width="209" height="30" uuid="5b3c793f-e613-4724-8da3-e2a13ee76014"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Booking Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="180" width="209" height="30" uuid="9b00d168-cef1-4c18-9928-fba415759882"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Guest Count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="210" width="209" height="30" uuid="e2564a80-87b7-4984-9966-8aef88f22981"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="78" width="110" height="30" uuid="32982b36-247b-40da-a5b5-cdde8ebf8e2e"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BallroomID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="111" width="114" height="30" uuid="fd4a018e-e9db-4a75-aaa0-405074ea6f27"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Menu ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="142" width="110" height="30" uuid="6e2c62a1-aff3-4190-8cc3-fc9796a4c9e3"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Music ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="269" width="152" height="30" uuid="bcf5f37a-83f9-4b42-96ff-315e57f74f73"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="309" width="152" height="30" uuid="bd5c27b1-587f-414d-811a-e2accd6737e3"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Advance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="346" width="152" height="30" uuid="da785467-8324-4c36-b43d-07f6d0da1952"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="413" width="512" height="22" uuid="fb6cbb7f-0c6a-4246-98d7-fdad00145233"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[> Even if the price increases after the day you reserve your booking ,the fee will not increase.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="436" width="375" height="22" uuid="04e580e3-115e-4aa5-a234-bb9bb88a595a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[> Charges are based on prices on the day you reserve your booking.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="173" width="100" height="24" uuid="73862678-f967-4bd0-b196-13b8a997b656"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Liquor ID      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="211" width="100" height="24" uuid="0bdf019c-e48d-4ffb-928f-20bedfad331a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Liquor Count :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="443" y="172" width="100" height="30" uuid="3e3ece84-382a-45dd-a3d0-2e763fd50912"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Liquor ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="211" width="64" height="30" uuid="bb26cb69-c576-4102-9018-8bb3b3ad93dc"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Liquor Count}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="386" y="5" width="166" height="30" uuid="c338faaa-567f-42df-ab65-dca2f87e144e"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[.............................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="5" width="166" height="30" uuid="2ddeedeb-49bc-4957-81c4-7ffa155bba9c"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[.............................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="31" width="126" height="23" uuid="9b7acd8f-0a0e-43e9-84cb-6edcf0a9da8e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Manager Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="31" width="131" height="23" uuid="fea83ea0-f7af-4197-88ea-dbdd3422329e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Customer Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="56" width="555" height="23" uuid="257b2c29-26ea-4f83-931b-aebaf340a47a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You !]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

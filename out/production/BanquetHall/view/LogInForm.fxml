@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LogInContext" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/LogIn-bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="484.0" layoutY="73.0" prefHeight="559.0" prefWidth="452.0" style="-fx-background-color: #fff6c7;">
+         <children>
+            <Label layoutX="37.0" layoutY="40.0" text="LogIn">
+               <font>
+                  <Font name="Microsoft Tai Le Bold" size="60.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="135.0" prefHeight="4.0" prefWidth="409.0" />
+            <JFXTextField fx:id="txtUserName" focusColor="BLACK" labelFloat="true" layoutX="36.0" layoutY="176.0" prefHeight="65.0" prefWidth="385.0" promptText="User name">
+               <font>
+                  <Font name="Microsoft Tai Le" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="69.0" layoutY="433.0" onAction="#loginOnAction" prefHeight="53.0" prefWidth="313.0" ripplerFill="BLACK" style="-fx-background-color: #e0b73d;" text="Let’s Login">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXPasswordField fx:id="pwdPassword" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="290.0" prefHeight="65.0" prefWidth="385.0" promptText="Password">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXPasswordField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="-233.0" layoutY="285.0" prefHeight="123.0" prefWidth="648.0" rotate="-90.0" text="VELS DEMORA ">
+         <font>
+            <Font name="Nirmala UI Bold" size="90.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#deb33e" offset="0.007246376811594203" />
+                  <Stop color="#deb33e" offset="0.10564080704745676" />
+                  <Stop color="WHITE" offset="0.24936061381074187" />
+                  <Stop color="#deb33e" offset="0.37965331059960233" />
+                  <Stop color="#deb13e" offset="0.5269252628587667" />
+                  <Stop color="#deb13e" offset="0.6347684001136688" />
+                  <Stop color="WHITE" offset="0.7502131287297527" />
+                  <Stop color="#deb33e" offset="0.8659420289855072" />
+                  <Stop color="#deb33e" offset="0.9710144927536232" />
+                  <Stop color="#deb33e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="-84.0" layoutY="348.0" prefHeight="94.0" prefWidth="559.0" rotate="-90.0" text="BANQUET HALL">
+         <font>
+            <Font name="Nirmala UI Bold" size="65.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#deb33e" offset="0.007246376811594203" />
+                  <Stop color="#deb33e" offset="0.1418726911054277" />
+                  <Stop color="WHITE" offset="0.30008525149190124" />
+                  <Stop color="#deb33e" offset="0.4738562091503269" />
+                  <Stop color="WHITE" offset="0.658851946575732" />
+                  <Stop color="#deb13e" offset="0.819195794259733" />
+                  <Stop color="#deb33e" offset="0.9420289855072463" />
+                  <Stop color="#deb33e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

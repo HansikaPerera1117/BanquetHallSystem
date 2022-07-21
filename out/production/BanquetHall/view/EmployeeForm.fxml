@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblEmployee" layoutX="58.0" layoutY="443.0" prefHeight="424.0" prefWidth="1584.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="88.00003051757812" text="ID" />
+            <TableColumn fx:id="colName" minWidth="8.0" prefWidth="169.00003051757812" text="Name" />
+            <TableColumn fx:id="colBallroomId" prefWidth="117.0" text="Ballroom Id" />
+            <TableColumn fx:id="colGender" minWidth="0.0" prefWidth="114.0" text="Gender" />
+            <TableColumn fx:id="colNIC" minWidth="0.0" prefWidth="175.0" text="NIC" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="143.0" text="Address" />
+            <TableColumn fx:id="colTelNo" minWidth="0.0" prefWidth="173.0" text="TelNo" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="292.0" text="Email" />
+            <TableColumn fx:id="colType" minWidth="0.0" prefWidth="156.0" text="Type" />
+            <TableColumn fx:id="colOption" minWidth="0.0" prefWidth="154.0" text="Option" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="38.0" layoutY="147.0" opacity="0.14" prefHeight="205.0" prefWidth="1291.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <JFXButton fx:id="btnAddEmployee" buttonType="RAISED" layoutX="1350.0" layoutY="258.0" onAction="#btnAddEmployeeOnAction" prefHeight="65.0" prefWidth="318.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Add Employee">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="58.0" layoutY="374.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="137.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1551.0" layoutY="94.0" onAction="#btnNewEmployeeOnAction" prefHeight="58.0" prefWidth="124.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="+ New">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1599.0" layoutY="893.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1571.0" layoutY="893.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="625.0" layoutY="181.0" prefHeight="65.0" prefWidth="160.0" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;" />
+      <JFXComboBox fx:id="cmbBallroomId" focusColor="#fff7d2" layoutX="626.0" layoutY="180.0" prefHeight="65.0" prefWidth="160.0" promptText="Ballroom Id" unFocusColor="BLACK" />
+      <TextField fx:id="txtID" layoutX="58.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="160.0" promptText="E-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="25.0" layoutY="79.0" prefHeight="46.0" prefWidth="349.0" text="Employee Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="229.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="385.0" promptText="Name" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtGender" layoutX="797.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="172.0" promptText="Gender" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNIC" layoutX="982.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="294.0" promptText="NIC" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="58.0" layoutY="258.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="275.0" promptText="Address" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTelNo" layoutX="345.0" layoutY="258.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="294.0" promptText="TelNo" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="651.0" layoutY="258.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="385.0" promptText="Email" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtType" layoutX="1049.0" layoutY="258.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="256.0" promptText="Type" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

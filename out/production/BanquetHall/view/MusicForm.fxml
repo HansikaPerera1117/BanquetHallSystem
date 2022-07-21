@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="musicContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MusicFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblMusic" layoutX="151.0" layoutY="449.0" prefHeight="424.0" prefWidth="1396.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="130.0" text="ID" />
+            <TableColumn fx:id="colName" minWidth="8.0" prefWidth="229.00003051757812" text="Name" />
+            <TableColumn fx:id="colDescription" prefWidth="694.0" text="Description" />
+            <TableColumn fx:id="colPayment" minWidth="0.0" prefWidth="184.0" text="Payment" />
+            <TableColumn fx:id="colOption" minWidth="0.0" prefWidth="157.0" text="Option" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="98.0" layoutY="146.0" opacity="0.14" prefHeight="208.0" prefWidth="1148.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <JFXButton fx:id="btnAddMusic" buttonType="RAISED" layoutX="1307.0" layoutY="257.0" onAction="#btnAddMusicOnAction" prefHeight="65.0" prefWidth="318.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Add Music">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="126.0" layoutY="375.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="137.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1551.0" layoutY="94.0" onAction="#btnNewMusicOnAction" prefHeight="58.0" prefWidth="124.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="+ New">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1599.0" layoutY="893.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1571.0" layoutY="893.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtID" layoutX="126.0" layoutY="177.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="171.0" promptText="Mu-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="28.0" layoutY="84.0" prefHeight="46.0" prefWidth="246.0" text="Music Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="311.0" layoutY="177.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="560.0" promptText="Name" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPayment" layoutX="885.0" layoutY="177.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="318.0" promptText="Payment" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescription" layoutX="126.0" layoutY="257.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="1091.0" promptText="Description" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

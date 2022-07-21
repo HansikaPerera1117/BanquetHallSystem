@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerContext" prefHeight="960.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="1700.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/Bc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="75.0" prefWidth="1700.0" style="-fx-background-color: #c9a42b;">
+         <children>
+            <Label layoutX="17.0" layoutY="8.0" text="VELS DEMORA BANQUET">
+               <font>
+                  <Font name="Nirmala UI Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="48.0" layoutY="146.0" opacity="0.14" prefHeight="210.0" prefWidth="1278.0" style="-fx-background-color: #fff7d2; -fx-border-color: #000000; -fx-background-radius: 20;" />
+      <TableView fx:id="tblCustomer" layoutX="185.0" layoutY="436.0" prefHeight="424.0" prefWidth="1330.0" style="-fx-background-color: #fff7d2;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="147.99996948242188" text="ID" />
+            <TableColumn fx:id="colName" minWidth="8.0" prefWidth="190.0" text="Name" />
+            <TableColumn fx:id="colNIC" minWidth="0.0" prefWidth="217.0" text="NIC" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="203.0" text="Address" />
+            <TableColumn fx:id="colTelNo" minWidth="0.0" prefWidth="222.0" text="TelNo" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="348.0" text="Email" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdateCustomer" buttonType="RAISED" layoutX="1347.0" layoutY="277.0" onAction="#btnUpdateCustomerOnAction" prefHeight="65.0" prefWidth="318.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Update Customer">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="89.0" layoutY="365.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="137.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1596.0" layoutY="889.0" onAction="#backToMainOnAction" prefHeight="54.0" prefWidth="86.0" ripplerFill="BLACK" style="-fx-background-color: #daa637;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="1568.0" layoutY="889.0" prefHeight="54.0" prefWidth="44.0" style="-fx-background-color: #daa637; -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtID" layoutX="89.0" layoutY="178.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="166.0" promptText="C-000" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="18.0" layoutY="79.0" prefHeight="46.0" prefWidth="349.0" text="Customer Section" textFill="#ffd256">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="270.0" layoutY="178.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="385.0" promptText="Name" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNIC" layoutX="669.0" layoutY="178.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="294.0" promptText="NIC" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="977.0" layoutY="178.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="275.0" promptText="Address" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTelNo" layoutX="89.0" layoutY="257.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="294.0" promptText="TelNo" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="396.0" layoutY="257.0" onKeyReleased="#textFields_Key_Released" prefHeight="65.0" prefWidth="385.0" promptText="Email" style="-fx-background-color: #fff7d2; -fx-background-radius: 20; -fx-border-color: #000000;">
+         <font>
+            <Font name="Microsoft Tai Le" size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblDate" alignment="TOP_RIGHT" layoutX="1384.0" layoutY="23.0" prefHeight="36.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="TOP_RIGHT" layoutX="1553.0" layoutY="23.0" prefHeight="36.0" prefWidth="131.0">
+         <font>
+            <Font name="Microsoft Tai Le" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
